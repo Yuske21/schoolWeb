@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "titulo": "Noticia uno",
+        "introduccion": "fasdfasdfasd adfasdfasdf asdfadsf asdf asdf",
+        "cuerpo": "Adfasd lakjfl kajdf lakjdf lkajdf lñkajflka flñakdjflñakdjfl ñakjdflñkajdflñkajdflñkajdf alñkjdflñksf",
+        "imagen": "noti1.png",
+        "fecha": "26 de Marxo 2026"
+    },
+    {
+        "id": 2,
+        "titulo": "Noticia uno",
+        "introduccion": "fasdfasdfasd adfasdfasdf asdfadsf asdf asdf",
+        "cuerpo": "Adfasd lakjfl kajdf lakjdf lkajdf lñkajflka flñakdjflñakdjfl ñakjdflñkajdflñkajdflñkajdf alñkjdflñksf",
+        "imagen": "noti2.png",
+        "fecha": "26 de Marxo 2026"
+    },
+    {
+        "id": 3,
+        "titulo": "Noticia uno",
+        "introduccion": "fasdfasdfasd adfasdfasdf asdfadsf asdf asdf",
+        "cuerpo": "Adfasd lakjfl kajdf lakjdf lkajdf lñkajflka flñakdjflñakdjfl ñakjdflñkajdflñkajdflñkajdf alñkjdflñksf",
+        "imagen": "noti3.png",
+        "fecha": "26 de Marxo 2026"
+    },
+    {
+        "id": 4,
+        "titulo": "Noticia uno",
+        "introduccion": "fasdfasdfasd adfasdfasdf asdfadsf asdf asdf",
+        "cuerpo": "Adfasd lakjfl kajdf lakjdf lkajdf lñkajflka flñakdjflñakdjfl ñakjdflñkajdflñkajdflñkajdf alñkjdflñksf",
+        "imagen": "noti4.png",
+        "fecha": "26 de Marxo 2026"
+    }
+]

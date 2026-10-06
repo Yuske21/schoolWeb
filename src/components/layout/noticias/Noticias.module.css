@@ -1,0 +1,64 @@
+.news_section {
+    padding: 0px ;
+    text-align: center;
+    background-color: var(--color4);
+    border: 5px solid greenyellow;
+}
+
+.news_section p {
+    padding: 10px;
+}
+
+.news_section h1,
+.news_section h2,
+.news_section h3 {
+    padding: 10px;
+    text-shadow: none;
+}
+
+/* Grid en lugar de flex */
+.news_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    color: var(--color0);
+    background-color: var(--color2);
+    border: 5px solid orangered;
+}
+.news_container a {
+        color: var(--color0);
+    }
+
+/* Card uniforme */
+.news_box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+    background-color: var(--color4);
+    overflow: hidden;
+}
+
+
+/* Imagen con altura fija */
+.news_box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Limitar título a 2 líneas */
+.news_box h2,
+.news_box h3 {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Empuja la fecha al fondo */
+.news_box p:last-child {
+    margin-top: auto;
+    text-align: right;
+}

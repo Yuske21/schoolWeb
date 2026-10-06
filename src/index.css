@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px solid rgb(229, 255, 0);*/
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000;
+    font-size: 0.9rem;
+    color: var(--color0);
+}
+
+/*h1 {
+    color: var(--color0);
+    margin: 0;
+    text-shadow: 3px 3px 8px var(--color3);
+}*/
+
+:root {
+    --color-w: #ffffff;    
+    /**/
+    --color0: #ebebeb;
+    --color1: #080808;
+    --color2: #222222;
+    --color3: #f12529;    
+    --color4: #720103;    
+    --color5: #231588;
+    --color6: #20185f;
+    --color7: #b7caeb;
+    --color8: #ffb2b3;
+    --color9: #aac0ec;
+    --color10: #c71518;
+    --color11: #273c75;
+    --color12: #d9dee7;
+    --color13: #727272;
+    
+}
+
+button, a {
+    text-decoration: none;
+    cursor: pointer;    
+}
+
+
+
+@media (max-width: 768px) {
+    .contenedor-ubicacion {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa iframe {
+        height: 250px;
+    }
+}

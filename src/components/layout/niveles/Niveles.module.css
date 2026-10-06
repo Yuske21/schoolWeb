@@ -1,0 +1,67 @@
+.level_section {
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+}
+
+.level_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.level {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--color2);
+
+    border-top: 100px solid var(--color3);
+    border-bottom: 10px solid var(--color0);
+    border-left: 10px solid var(--color0);
+    border-right: 10px solid var(--color0);
+
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.level:hover {
+    border-color: var(--color3);
+}
+
+.level_img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid var(--color6);
+
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.level_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.level_title {
+    margin-top: 90px;
+    font-weight: bold;
+}
+
+.level_content {
+    margin-top: 10px;
+    padding: 0 10px;
+    flex-grow: 1; /* empuja el botón hacia abajo */
+}
+
+/* BOTON SIEMPRE ABAJO */
+.level_link {
+    margin-top: auto;
+    padding: 10px;
+}

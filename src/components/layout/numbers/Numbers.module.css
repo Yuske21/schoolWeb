@@ -1,0 +1,23 @@
+.number_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px 0;
+    background-color: var(--color6);
+    border-top: 8px solid var(--color5)
+}
+
+.number_box {
+    text-align: center;
+}
+
+.number_box p {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color0);
+}
+
+.number_box .p1 {
+    font-weight: 900;
+    font-size: 5rem;
+}

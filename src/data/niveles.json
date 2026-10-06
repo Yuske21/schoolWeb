@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titulo": "Nivel Inicial",
+        "descripcion": "El Nivel Inicial constituye la primera etapa de la educación formal. Está orientado al desarrollo integral de los niños y niñas, promoviendo sus capacidades cognitivas, sociales, emocionales y motrices. A través del juego, la exploración y diferentes experiencias educativas, se favorece el aprendizaje y la construcción de vínculos con sus pares y docentes. En esta etapa se busca generar un ambiente seguro, afectivo y estimulante que acompañe a cada niño en sus primeros aprendizajes y fortalezca su autonomía, creatividad y curiosidad.",
+        "imagen": "/images/niveles/nivel-inicial.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "Nivel Primario",
+        "descripcion": "El Nivel Primario tiene como propósito brindar a los estudiantes los conocimientos, habilidades y valores fundamentales para su formación integral. Durante esta etapa se desarrollan aprendizajes relacionados con la lengua, matemática, ciencias, tecnología, arte y otras áreas del conocimiento. También se promueve la convivencia, el respeto, la responsabilidad y la participación. La institución acompaña a los estudiantes en el desarrollo progresivo de su autonomía, pensamiento crítico y capacidad para resolver diferentes situaciones de aprendizaje.",
+        "imagen": "/images/niveles/nivel-primario.jpg"
+    },
+    {
+        "id": 3,
+        "titulo": "Nivel Secundario",
+        "descripcion": "El Nivel Secundario busca profundizar los conocimientos adquiridos durante la educación primaria y preparar a los estudiantes para nuevos desafíos académicos, personales y sociales. Se promueve el pensamiento crítico, la investigación, la resolución de problemas y el uso responsable de las tecnologías. Además, se brinda orientación para que los estudiantes puedan proyectar su futuro educativo y laboral. La formación secundaria busca fortalecer la autonomía, la responsabilidad, la participación ciudadana y el desarrollo de competencias necesarias para desenvolverse en una sociedad en constante transformación.",
+        "imagen": "/images/niveles/nivel-secundario.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Nivel Superior",
+        "descripcion": "El Nivel Superior, también denominado formación terciaria, ofrece propuestas educativas orientadas a la formación profesional y académica. En esta etapa los estudiantes profundizan conocimientos específicos relacionados con diferentes áreas profesionales y desarrollan competencias necesarias para su futura inserción laboral. La formación combina contenidos teóricos y prácticos, promoviendo la investigación, el pensamiento crítico, la responsabilidad y la autonomía. El objetivo es brindar herramientas que permitan a los estudiantes continuar su trayectoria educativa y desempeñarse de manera competente y responsable en el ámbito profesional.",
+        "imagen": "/images/niveles/nivel-superior.jpg"
+    }
+]

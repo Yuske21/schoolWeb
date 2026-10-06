@@ -1,0 +1,43 @@
+
+.prefooter_container {
+    border-top: 5px solid var(--color0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 15px;
+}
+
+.prefooter_container p {
+    padding: 2px;
+}
+
+.prefooter_box {
+    padding: 0px 10px;
+}
+
+.prefooter_box img {
+    width: 150px;
+}
+
+.prefooter_box a {
+    padding: 4px;
+    color: var(--color0);
+    text-decoration: none;
+}
+
+.prefooter_box h3 {
+    padding: 0 0 8px 0;
+}
+
+/*************************************************/
+.footer{
+    background-color: var(--color3);
+    text-align: center;
+    padding: 15px;    
+}
+
+.footer p {
+    font-weight: 600;
+}

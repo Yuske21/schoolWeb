@@ -1,0 +1,252 @@
+/* MAIN */
+.alumno-main {
+    width: 94%;
+    max-width: 1500px;
+    margin: 30px auto;
+    flex: 1;
+}
+
+/* PANEL MATERIAL */
+.panel-materiales {
+    background-color: var(--color12);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* TITULO */
+.titulo-panel {
+    margin-bottom: 25px;
+}
+
+.titulo-panel h2 {
+    margin: 0 0 7px;
+    font-size: 24px;
+    color: var(--color11);
+}
+
+.titulo-panel p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
+
+/* FILTROS */
+.filtros-materiales {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    align-items: end;
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #f7f8fb;
+    border-radius: 12px;
+}
+
+.filtros-materiales label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+.filtros-materiales input,
+.filtros-materiales select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 13px;
+    border: 1px solid #e0e4eb;
+    border-radius: 8px;
+    background-color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.filtros-materiales input:focus,
+.filtros-materiales select:focus {
+    border-color: #6875d9;
+}
+
+.btn-buscar {
+    height: 40px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color12);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-buscar:hover {
+    background-color: #1f3060;
+}
+
+
+/* LISTA */
+.lista-materiales {
+    width: 100%;
+}
+
+.encabezado-materiales {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 130px;
+    gap: 15px;
+    padding: 14px 18px;
+    background-color: #f1f3f7;
+    border-radius: 9px;
+    color: #777;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.material-alumno {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 130px;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border-bottom: 1px solid #edf0f5;
+    transition: 0.2s;
+}
+
+.material-alumno:hover {
+    background-color: #fafbfe;
+}
+
+/* INFORMACION MATERIAL */
+.material-titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.material-titulo strong {
+    font-size: 15px;
+    color: #333;
+}
+
+.material-titulo small {
+    color: #999;
+    font-size: 12px;
+}
+
+.material-materia {
+    color: #53659e;
+    font-size: 14px;
+}
+
+.material-docente {
+    color: #555;
+    font-size: 14px;
+}
+
+.material-fecha {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: #555;
+    font-size: 13px;
+}
+
+.material-fecha small {
+    color: #999;
+}
+
+
+/* DESCARGAR */
+.material-descarga {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-descargar {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background-color: #eef2ff;
+    color: #3f51b5;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-descargar:hover {
+    background-color: #dfe5ff;
+}
+
+
+/* ============================== */
+/*           RESPONSIVE           */
+/* ============================== */
+@media (max-width: 1000px) {
+    .encabezado-materiales {
+        display: none;
+    }
+
+    .material-alumno {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .material-descarga {
+        justify-content: flex-start;
+    }
+
+}
+
+/* ============================== */
+@media (max-width: 700px) {
+    .barra-alumno {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .acciones-alumno {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .barra-colegio-alumno {
+        min-height: 80px;
+    }
+
+    .barra-colegio-alumno h1 {
+        font-size: 21px;
+    }
+
+    .logo-colegio-alumno {
+        width: 50px;
+        height: 50px;
+        left: 15px;
+    }
+
+    .menu-alumno {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .menu-alumno a {
+        white-space: nowrap;
+    }
+
+    .panel-materiales {
+        padding: 20px;
+    }
+
+    .filtros-materiales {
+        grid-template-columns: 1fr;
+    }
+
+    .material-alumno {
+        grid-template-columns: 1fr;
+    }
+
+    .material-descarga {
+        justify-content: flex-start;
+    }
+}

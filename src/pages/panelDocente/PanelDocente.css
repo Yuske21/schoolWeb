@@ -1,0 +1,319 @@
+/* MAIN */
+.docente-main {
+    width: 95%;
+    max-width: 1600px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(350px, 1.4fr) minmax(280px, 0.9fr);
+    gap: 25px;
+    flex: 1;
+}
+
+
+/* PANELES */
+.panel {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    min-height: 500px;
+}
+
+.panel-titulo {
+    margin-bottom: 25px;
+}
+
+.panel-titulo h2 {
+    margin: 0 0 5px;
+
+    font-size: 21px;
+    color: #273c75;
+}
+
+.panel-titulo p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* MATERIALES */
+
+.materiales-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.material-item {
+    padding: 16px;
+    border: 1px solid var(--color9);
+    border-radius: 12px;
+    transition: 0.2s;    
+}
+
+.material-item:hover {
+    border-color: #d9def0;
+    transform: translateY(-2px);
+}
+
+.material-info h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.material-info span {
+    display: block;
+    font-size: 13px;
+    color: #6875a0;
+}
+
+.material-info small {
+    display: block;
+    margin-top: 7px;
+    color: #999;
+}
+
+.material-acciones {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.material_icon{
+    padding-right: 5px;
+}
+
+.material-link {
+    color: var(--color3);
+    text-decoration: none;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.material-link:hover {
+    text-decoration: underline;
+}
+
+.btn-editar-material {
+    border: none;
+    border-radius: 7px;
+    padding: 7px 12px;
+    background: #eef2ff;
+    color: #3f51b5;
+    cursor: pointer;
+}
+
+
+/* FORMULARIO */
+
+.form-material {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 13px;
+    border: 1px solid #e0e4eb;
+    border-radius: 9px;
+    background: #fafbfc;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #6875d9;
+    background: #ffffff;
+}
+
+.botones-formulario {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.botones-formulario button {
+    border: none;
+    padding: 11px 22px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-guardar {
+    background: #273c75;
+    color: white;
+}
+
+.btn-guardar:hover {
+    background: #1f3060;
+}
+
+.btn-cancelar {
+    background: #edf0f4;
+    color: #555;
+}
+
+.btn-cancelar:hover {
+    background: #e0e3e8;
+}
+
+
+/* CALENDARIO */
+.calendario-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.calendario-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #273c75;
+}
+
+.calendario-header button {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    background: #eef2ff;
+    color: #273c75;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.dias-semana,
+.dias-calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.dias-semana {
+    margin-bottom: 8px;
+}
+
+.dias-semana div {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+}
+
+.dia {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+.dia:hover {
+    background: #f0f2f8;
+}
+
+.calendario-vacio {
+    background: transparent;
+}
+
+.dia-hoy {
+    background: #273c75;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+.docente-footer {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color3);
+    color: white;
+    font-size: 14px;
+}
+
+
+/* ============================== */
+/*           RESPONSIVE           */
+/* ============================== */
+@media (max-width: 1100px) {
+    .docente-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .calendario-panel {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 750px) {
+    .barra-profesor {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .acciones-profesor {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .barra-colegio {
+        min-height: 80px;
+    }
+
+    .barra-colegio h1 {
+        font-size: 22px;
+    }
+
+    .logo-colegio {
+        width: 50px;
+        height: 50px;
+        left: 15px;
+    }
+
+    .menu-docente {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .menu-docente a {
+        white-space: nowrap;
+    }
+
+    .docente-main {
+        grid-template-columns: 1fr;
+    }
+
+    .calendario-panel {
+        grid-column: auto;
+    }
+}

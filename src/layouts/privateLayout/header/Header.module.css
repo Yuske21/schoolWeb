@@ -1,0 +1,120 @@
+/* PANEL GENERAL */
+.panel_user {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f5f9;
+    color: #252a34;
+}
+
+/* BARRA USER */
+.barra_user {
+    min-height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid #e6e9ef;
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #777;
+}
+
+.user_info strong {
+    color: #273c75;
+}
+
+.hora_user {
+    font-size: 15px;
+    color: #555;
+}
+
+.acciones_user {
+    display: flex;
+    gap: 10px;
+}
+
+.acciones_user button {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn_datos {
+    background-color: #eef2ff;
+    color: #3f51b5;
+}
+
+.btn_datos:hover {
+    background-color: #dfe5ff;
+}
+
+.btn_salir {
+    background-color: #ffe8e8;
+    color: #d63031;
+}
+
+.btn_salir:hover {
+    background-color: #ffd2d2;
+}
+
+/* BARRA COLEGIO */
+.barra_colegio_user {
+    min-height: 95px;
+    padding: 15px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+}
+
+.barra_colegio_user h1 {
+    margin: 0;
+    font-size: 27px;
+    color: #273c75;
+}
+
+.logo_colegio_user {
+    position: absolute;
+    left: 35px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #eef2ff;
+    color: #273c75;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* MENU */
+.menu_user {
+    min-height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--color3);
+}
+
+.menu_user a {
+    padding: 16px 25px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.menu_user a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+
+}

@@ -1,0 +1,109 @@
+.principal_container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--color7);
+}
+
+
+/* ENCABEZADO */
+.encabezado {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.encabezado h1 {
+    margin: 0 0 10px;
+    font-size: 2.4rem;
+    color: #1f2937;
+}
+
+.encabezado p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+
+/* GRID DE DOCENTES */
+.user_grid {
+    display: grid;
+    /* 4 docentes por fila */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* TARJETA */
+.user_card {
+    background-color: var(--color-w);
+    border-radius: 18px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eeeeee;
+    border: 1px solid var(--color8);
+    border-top: 6px solid var(--color3);
+    /**/
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* FOTO */
+.foto_container {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.foto_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* INFORMACIÓN */
+.info h2 {
+    margin: 0 0 0px;
+    font-size: 1.2rem;
+    color: var(--color6);
+}
+
+
+/* DATOS */
+.dato {
+    margin-bottom: 10px;
+}
+
+.dato span {
+    margin-bottom: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #9ca3af;
+}
+
+.dato p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color6);
+    word-break: break-word;
+}
+
+.panel_materia {
+    margin-bottom: 10px;
+}
+
+.info_materia {
+    color: var(--color3);
+    font-weight: 600;    
+}

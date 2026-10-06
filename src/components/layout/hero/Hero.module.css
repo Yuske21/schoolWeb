@@ -1,0 +1,31 @@
+.hero {
+    height: 400px;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.8) 30%,
+            rgba(0, 0, 0, 0.6) 60%,
+            rgba(0, 0, 0, 0.3) 100%),
+        url("src/assets/index/portada.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.overlay {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    color: white;
+    padding-left: 10px;
+}
+
+.overlay h2 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.overlay p {
+    font-size: 20px;
+    font-style: italic;
+}
