@@ -88,7 +88,6 @@ function infoNoticias() {
                                 </div>
                             </Link>
                         </div>
-
                     </div>
                 </div>
             </section>
