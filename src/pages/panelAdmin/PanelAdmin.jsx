@@ -1,4 +1,4 @@
-import FormNoticias from "../../components/newsManagement/formNews/FormNews"
+import FormNews from "../../components/newsManagement/formNews/FormNews"
 import ListNews from "../../components/newsManagement/newsList/NewsList"
 import Header from "../../layouts/privateLayout/header/Header"
 import Footer from "../../layouts/privateLayout/footer/Footer"
@@ -8,7 +8,7 @@ function PanelAdmin() {
         <>
             <Header user="Administrador: "/>
             <main>
-                <FormNoticias />
+                <FormNews />
             </main>
             <Footer />
         </>
