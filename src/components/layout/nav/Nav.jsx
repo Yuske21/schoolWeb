@@ -113,22 +113,22 @@ const Nav = () => {
                         </button>
                         <ul id="niveles-submenu" className={style.dropdown}>
                             <li className={style.nav_item}>
-                                <Link to="/autoridades" className={style.nav_link} onClick={cerrarMenu}>
+                                <Link to="/info-niveles/1" className={style.nav_link} onClick={cerrarMenu}>
                                     Inicial
                                 </Link>
                             </li>
                             <li className={style.nav_item}>
-                                <Link to="/administracion" className={style.nav_link} onClick={cerrarMenu}>
+                                <Link to="/info-niveles/2" className={style.nav_link} onClick={cerrarMenu}>
                                     Primario
                                 </Link>
                             </li>
                             <li className={style.nav_item}>
-                                <Link to="/docentes" className={style.nav_link} onClick={cerrarMenu}>
+                                <Link to="/info-niveles/3" className={style.nav_link} onClick={cerrarMenu}>
                                     Secundario
                                 </Link>
                             </li>
                             <li className={style.nav_item}>
-                                <Link to="/docentes" className={style.nav_link} onClick={cerrarMenu}>
+                                <Link to="/info-niveles/4" className={style.nav_link} onClick={cerrarMenu}>
                                     Terciario
                                 </Link>
                             </li>
