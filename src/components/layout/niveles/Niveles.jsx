@@ -5,7 +5,7 @@ import style from "./Niveles.module.css";
 const Niveles = () => {
     return (
         <>
-            <section className={style.level_section}>
+            <section id="niveles" className={style.level_section}>
                 <div className="app_title_container">
                     <div className="app_title1">
                         <p className="p_red">EDUCACIÓN</p>

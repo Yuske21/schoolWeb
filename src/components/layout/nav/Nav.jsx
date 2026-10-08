@@ -1,64 +1,147 @@
-import style from "./Nav.module.css"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import style from "./Nav.module.css";
 
 const Nav = () => {
+    const [menuAbierto, setMenuAbierto] = useState(false);
+    const [submenuAbierto, setSubmenuAbierto] = useState(null);
+
+    const cerrarMenu = () => {
+        setMenuAbierto(false);
+        setSubmenuAbierto(null);
+    };
+
+    const alternarSubmenu = (submenu) => {
+        setSubmenuAbierto((actual) => (actual === submenu ? null : submenu));
+    };
+
     return (
-        <section>            
-            {/**-- vertical nav -- */}
-            <label htmlFor="menu_hamburger" className={style.label_hamburger}>
-                <i className="fa-solid fa-bars fa-2xl"></i>                
-            </label>
-            <input type="checkbox" id="menu_hamburger" className={style.menu_hamburger} />
-            {/**-- horizontal nav -- */}
-            <div className={style.navbar_container}>                
-                <nav className={style.navbar}>
-                    <div className={style.nav_item}>
-                        <a href="/" className={style.a_principal}>Inicio</a>
-                    </div>
-                    <div className={style.nav_item + " " + style.has_submenu}>
-                        <a href="#">Novedades</a>
-                        <div className={style.dropdown}>
-                            <div className={style.nav_item}>
-                                <a href="#">Noticias</a>
-                            </div>
-                            <div className={style.nav_item}>
-                                <a href="#">Eventos</a>
-                            </div>
-                            <div className={style.nav_item}>
-                                <a href="#">Anuncios</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.nav_item + " " + style.has_submenu}>
-                        <a href="#">Institucion</a>
-                        <div className={style.dropdown}>
-                            <div className={style.nav_item + " " + style.has_submenu}>
-                                <a href="#">Historia</a>
-                                <div className={style.dropdown + " " + style.submenu}>
-                                    <a href="#">Historia 1</a>
-                                    <a href="#">Historia 2</a>
-                                    <a href="#">Historia 3</a>
-                                </div>
-                            </div>
-                            <div className={style.nav_item}>
-                                <a href="#">Autoridades</a>
-                            </div>
-                            <div className={style.nav_item}>
-                                <a href="#">Proyecto</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.nav_item}>
-                        <a href="#">Niveles</a>
-                    </div>
-                    <div className={style.nav_item}>
-                        <a href="#">Comunidad</a>
-                    </div>
-                    <div className={style.nav_item}>
-                        <a href="#">Contacto</a>
-                    </div>
-                </nav >
-            </div>
-        </section>
+        <div className={style.nav_root}>
+            <button
+                type="button"
+                className={style.menu_toggle}
+                aria-label={menuAbierto ? "Cerrar menú" : "Abrir menú"}
+                aria-expanded={menuAbierto}
+                aria-controls="primary-navigation"
+                onClick={() => setMenuAbierto((abierto) => !abierto)}
+            >
+                <i
+                    className={`fa-solid ${menuAbierto ? "fa-xmark" : "fa-bars"} fa-xl`}
+                    aria-hidden="true"
+                />
+            </button>
+
+            <nav
+                id="primary-navigation"
+                className={`${style.navbar_container} ${menuAbierto ? style.menu_open : ""}`}
+                aria-label="Navegación principal"
+            >
+                <ul className={style.navbar}>
+                    <li className={style.nav_item}>
+                        <Link to="/" className={`${style.nav_link} ${style.a_principal}`} onClick={cerrarMenu}>
+                            Inicio
+                        </Link>
+                    </li>
+                    <li
+                        className={`${style.nav_item} ${style.has_submenu} ${
+                            submenuAbierto === "novedades" ? style.dropdown_open : ""
+                        }`}
+                    >
+                        <button
+                            type="button"
+                            className={style.submenu_toggle}
+                            aria-expanded={submenuAbierto === "novedades"}
+                            aria-controls="news-submenu"
+                            onClick={() => alternarSubmenu("novedades")}
+                        >
+                            Novedades
+                        </button>
+                        <ul id="news-submenu" className={style.dropdown}>
+                            <li className={style.nav_item}>
+                                <Link to="/#noticias" className={style.nav_link} onClick={cerrarMenu}>
+                                    Noticias
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        className={`${style.nav_item} ${style.has_submenu} ${
+                            submenuAbierto === "institucion" ? style.dropdown_open : ""
+                        }`}
+                    >
+                        <button
+                            type="button"
+                            className={style.submenu_toggle}
+                            aria-expanded={submenuAbierto === "institucion"}
+                            aria-controls="institution-submenu"
+                            onClick={() => alternarSubmenu("institucion")}
+                        >
+                            Institución
+                        </button>
+                        <ul id="institution-submenu" className={style.dropdown}>
+                            <li className={style.nav_item}>
+                                <Link to="/autoridades" className={style.nav_link} onClick={cerrarMenu}>
+                                    Autoridades
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/administracion" className={style.nav_link} onClick={cerrarMenu}>
+                                    Administración
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/docentes" className={style.nav_link} onClick={cerrarMenu}>
+                                    Docentes
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        className={`${style.nav_item} ${style.has_submenu} ${
+                            submenuAbierto === "niveles" ? style.dropdown_open : ""
+                        }`}
+                    >
+                        <button
+                            type="button"
+                            className={style.submenu_toggle}
+                            aria-expanded={submenuAbierto === "niveles"}
+                            aria-controls="niveles-submenu"
+                            onClick={() => alternarSubmenu("niveles")}
+                        >
+                            Niveles
+                        </button>
+                        <ul id="niveles-submenu" className={style.dropdown}>
+                            <li className={style.nav_item}>
+                                <Link to="/autoridades" className={style.nav_link} onClick={cerrarMenu}>
+                                    Inicial
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/administracion" className={style.nav_link} onClick={cerrarMenu}>
+                                    Primario
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/docentes" className={style.nav_link} onClick={cerrarMenu}>
+                                    Secundario
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/docentes" className={style.nav_link} onClick={cerrarMenu}>
+                                    Terciario
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className={style.nav_item}>
+                        <Link to="/#contacto" className={style.nav_link} onClick={cerrarMenu}>
+                            Contacto
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     );
 };
 

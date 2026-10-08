@@ -40,7 +40,7 @@ const Noticias = () => {
 
     return (
         <>
-            <section className={style.news_section}>
+            <section id="noticias" className={style.news_section}>
                 <div className="app_title_container">
                     <div className="app_title1">
                         <p>NOTICIAS</p>
