@@ -46,7 +46,7 @@ function InfoNiveles() {
                         </div>
                         <span className={style.subPanel_content}>{item.descripcion}</span>
                     </div>
-                    <FooterNews />
+                    <FooterNews nivel={item.titulo} />
                 </div>
             </section>
         </>

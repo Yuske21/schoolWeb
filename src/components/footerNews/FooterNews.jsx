@@ -1,11 +1,11 @@
 import style from './FooterNews.module.css'
 
-function FooterNews() {
+function FooterNews({nivel}) {
     return (
         <>
             <section className={style.panelFooter_container}>
                 <div>
-                    <h2>NOTICIAS - <span className={style.span_text}>Nivel Inicial</span></h2>
+                    <h2>NOTICIAS - <span className={style.span_text}>{nivel}</span></h2>
                 </div>
                 <div className={style.subpanel_news}>                    
                     <div className={style.news}>
