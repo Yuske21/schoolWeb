@@ -4,7 +4,7 @@ import { getFirestore } from 'firebase/firestore' /** permitirá obtener la base
 // https://firebase.google.com/docs/web/setup#available-libraries// Import the functions you need from the SDKs you need
 
 // Your web app's Firebase configuration
-const apiKey = import.meta.env.VITE_FIREBASE_PROJECT_ID;
+const apiKey = import.meta.env.VITE_FIREBASE_API_KEY;
 const authDomain = import.meta.env.VITE_FIREBASE_AUTH_DOMAIN;
 const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID;
 const storageBucket = import.meta.env.VITE_FIREBASE_STORAGEBUCKET;
