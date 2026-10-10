@@ -3,9 +3,11 @@ import "./PrivateLayout.css";
 
 function PrivateLayout() {
     return (
-        <div className="private-layout">
-            <Outlet />
-        </div>
+        <>
+            <div className="private-layout">
+                <Outlet />
+            </div>
+        </>
     );
 }
 
