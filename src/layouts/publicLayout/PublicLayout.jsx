@@ -1,12 +1,10 @@
 
-function PrivateLayout() {
+function PublicLayout() {
     return (
         <>
-            <div className="private-layout">
-                <Outlet />
-            </div>
+            <Outlet />
         </>
     );
 }
 
-export default PrivateLayout;
+export default PublicLayout;
