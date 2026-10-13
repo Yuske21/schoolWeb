@@ -3,7 +3,7 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 
 import { db } from "../firebase/config";
 
-const useNivelId = (id) => {
+const useNivelId = (id, tableName) => {
     const [resultado, setResultado] = useState({
         id: null,
         item: null,
@@ -22,7 +22,7 @@ const useNivelId = (id) => {
 
         const cargarNivel = async () => {
             try {
-                const consultaNivel = query( collection(db, "niveles"), where("id", "==", idNumerico));
+                const consultaNivel = query( collection(db, tableName), where("id", "==", idNumerico));
                 const respuesta = await getDocs(consultaNivel);
 
                 if (!cancelado) {
