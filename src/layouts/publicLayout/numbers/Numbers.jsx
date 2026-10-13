@@ -5,11 +5,11 @@ const Numbers = () => {
         <>
             <section className={style.number_container}>
                 <div className={style.number_box}>
-                    <p className={style.p1}>+15825</p>
+                    <p className={style.p1}>+386</p>
                     <p>Alumnos</p>
                 </div>
                 <div className={style.number_box}>
-                    <p className={style.p1}>+2347</p>
+                    <p className={style.p1}>+1247</p>
                     <p>Egresados</p>
                 </div>
                 <div className={style.number_box}>
