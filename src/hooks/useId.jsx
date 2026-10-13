@@ -22,8 +22,8 @@ const useNivelId = (id, tableName) => {
 
         const cargarItem = async () => {
             try {
-                const consultaNivel = query( collection(db, tableName), where("id", "==", idNumerico));
-                const respuesta = await getDocs(consultaNivel);
+                const consultaItem = query( collection(db, tableName), where("id", "==", idNumerico));
+                const respuesta = await getDocs(consultaItem);
 
                 if (!cancelado) {
                     const documento = respuesta.docs[0];
