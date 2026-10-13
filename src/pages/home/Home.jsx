@@ -1,4 +1,3 @@
-
 import Noticias from '../../layouts/publicLayout/noticias/Noticias'
 import Info from '../../layouts/publicLayout/info/Info'
 import Hero from '../../layouts/publicLayout/hero/Hero'
