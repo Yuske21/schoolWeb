@@ -2,14 +2,13 @@ import style from '../../components/infoPanel/InfoPanel.module.css'
 import FooterNews from '../../components/footerNews/FooterNews';
 import { useParams } from 'react-router-dom';
 
-import useNivelId from '../../hooks/useNivelId';
+import useId from '../../hooks/useId';
 
 function InfoNiveles() {
-
     const title = "Niveles";
     const tableName = "niveles"
     const { id } = useParams();
-    const { item, loading, error } = useNivelId(id, tableName);
+    const { item, loading, error } = useId(id, tableName);
 
     if (loading) {
         return <h2>Cargando detalle de {title}...</h2>;
