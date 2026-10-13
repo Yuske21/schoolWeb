@@ -11,6 +11,7 @@ import PanelDocente from './pages/panelDocente/PanelDocente.jsx'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Layout from './components/layout/Layout'
+import PublicLayout from './layouts/publicLayout/PublicLayout.jsx'
 import PrivateLayout from './layouts/privateLayout/PrivateLayout.jsx'
 
 
@@ -18,7 +19,7 @@ function App() {
     return (
         <>
             <Routes>
-                <Route element={<Layout />}>
+                <Route element={<PublicLayout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/autoridades" element={<Autoridades/>}/>
                     <Route path="/administracion" element={<Administracion/>}/>
