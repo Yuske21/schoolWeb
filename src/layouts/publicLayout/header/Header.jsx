@@ -36,7 +36,7 @@ const Header = () => {
                     </div>
                     <div className={style.header_nav}>
                         <Nav />
-                    </div>
+                    </div>                    
                 </div>
             </header>
         </>

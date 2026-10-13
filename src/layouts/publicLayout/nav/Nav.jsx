@@ -63,7 +63,12 @@ const Nav = () => {
                                     Noticias
                                 </Link>
                             </li>
-                        </ul>
+                            <li className={style.nav_item}>
+                                <Link to="/#inscripciones" className={style.nav_link} onClick={cerrarMenu}>
+                                    Inscripciones
+                                </Link>
+                            </li>
+                        </ul>                        
                     </li>
                     <li
                         className={`${style.nav_item} ${style.has_submenu} ${
@@ -80,6 +85,11 @@ const Nav = () => {
                             Institución
                         </button>
                         <ul id="institution-submenu" className={style.dropdown}>
+                            <li className={style.nav_item}>
+                                <Link to="/nuestra-historia" className={style.nav_link} onClick={cerrarMenu}>
+                                    Nuestra Historia
+                                </Link>
+                            </li>
                             <li className={style.nav_item}>
                                 <Link to="/autoridades" className={style.nav_link} onClick={cerrarMenu}>
                                     Autoridades
@@ -141,7 +151,7 @@ const Nav = () => {
                     </li>
                 </ul>
             </nav>
-        </div>
+        </div>        
     );
 };
 
