@@ -7,8 +7,9 @@ import useNivelId from '../../hooks/useNivelId';
 function InfoNiveles() {
 
     const title = "Niveles";
+    const tableName = "niveles"
     const { id } = useParams();
-    const { item, loading, error } = useNivelId(id);
+    const { item, loading, error } = useNivelId(id, tableName);
 
     if (loading) {
         return <h2>Cargando detalle de {title}...</h2>;
@@ -34,7 +35,7 @@ function InfoNiveles() {
                         <div className={style.panel_imagen}>
                             <div className={style.shadow_img}>
                             </div>
-                            <div className={style.panel_img}>                                
+                            <div className={style.panel_img}>
                                 <img src={item.imagen} alt={item.titulo} />
                             </div>
                         </div>
