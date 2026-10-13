@@ -10,7 +10,6 @@ import PanelAlumno from './pages/panelAlumno/PanelAlumno.jsx'
 import PanelDocente from './pages/panelDocente/PanelDocente.jsx'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import Layout from './components/layout/Layout'
 import PublicLayout from './layouts/publicLayout/PublicLayout.jsx'
 import PrivateLayout from './layouts/privateLayout/PrivateLayout.jsx'
 
