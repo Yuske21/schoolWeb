@@ -20,7 +20,7 @@ const useNivelId = (id, tableName) => {
             };
         }
 
-        const cargarNivel = async () => {
+        const cargarItem = async () => {
             try {
                 const consultaNivel = query( collection(db, tableName), where("id", "==", idNumerico));
                 const respuesta = await getDocs(consultaNivel);
@@ -40,7 +40,7 @@ const useNivelId = (id, tableName) => {
             }
         };
 
-        cargarNivel();
+        cargarItem();
 
         return () => {
             cancelado = true;
