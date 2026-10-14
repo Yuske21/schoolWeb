@@ -7,7 +7,7 @@ const Header = () => {
         <>
             <div className={style.bar_container}>
                 <div className={style.header_ubication}>
-                    <p><i className="fa-solid fa-location-dot fa-xl"></i> Banda del Río Salí - Tucumán</p>
+                    <p><i className="fa-solid fa-location-dot"></i> Banda del Río Salí - Tucumán</p>
                 </div>
                 <div className={style.header_social}>
                     <a href="https://www.facebook.com/col.santarita.brs" target="_blank" rel="noopener noreferrer">
@@ -29,14 +29,19 @@ const Header = () => {
             </div>
             <header className={style.header}>
                 <div className={style.header_container}>
-                    <img src={logo} alt="Logo Del Colegio Santa Rita" />                    
-                    <div className={style.header_title}>                        
+                    <img src={logo} alt="Logo Del Colegio Santa Rita" />
+                    <div className={style.header_title}>
                         <h2>Colegio</h2>
                         <h1>Santa Rita</h1>
-                    </div>
+                    </div>                    
                     <div className={style.header_nav}>
                         <Nav />
-                    </div>                    
+                    </div>
+                </div>
+                <div>
+                    <div className={style.sesion}>
+                        Ingresar <i className="fa-solid fa-user"></i>
+                    </div>
                 </div>
             </header>
         </>

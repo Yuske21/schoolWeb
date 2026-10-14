@@ -45,33 +45,6 @@ const Nav = () => {
                     </li>
                     <li
                         className={`${style.nav_item} ${style.has_submenu} ${
-                            submenuAbierto === "novedades" ? style.dropdown_open : ""
-                        }`}
-                    >
-                        <button
-                            type="button"
-                            className={style.submenu_toggle}
-                            aria-expanded={submenuAbierto === "novedades"}
-                            aria-controls="news-submenu"
-                            onClick={() => alternarSubmenu("novedades")}
-                        >
-                            Novedades
-                        </button>
-                        <ul id="news-submenu" className={style.dropdown}>
-                            <li className={style.nav_item}>
-                                <Link to="/#noticias" className={style.nav_link} onClick={cerrarMenu}>
-                                    Noticias
-                                </Link>
-                            </li>
-                            <li className={style.nav_item}>
-                                <Link to="/#inscripciones" className={style.nav_link} onClick={cerrarMenu}>
-                                    Inscripciones
-                                </Link>
-                            </li>
-                        </ul>                        
-                    </li>
-                    <li
-                        className={`${style.nav_item} ${style.has_submenu} ${
                             submenuAbierto === "institucion" ? style.dropdown_open : ""
                         }`}
                     >
@@ -144,6 +117,97 @@ const Nav = () => {
                             </li>
                         </ul>
                     </li>
+                    <li
+                        className={`${style.nav_item} ${style.has_submenu} ${
+                            submenuAbierto === "novedades" ? style.dropdown_open : ""
+                        }`}
+                    >
+                        <button
+                            type="button"
+                            className={style.submenu_toggle}
+                            aria-expanded={submenuAbierto === "novedades"}
+                            aria-controls="news-submenu"
+                            onClick={() => alternarSubmenu("novedades")}
+                        >
+                            Novedades
+                        </button>
+                        <ul id="news-submenu" className={style.dropdown}>
+                            <li className={style.nav_item}>
+                                <Link to="/#noticias" className={style.nav_link} onClick={cerrarMenu}>
+                                    Noticias
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/#inscripciones" className={style.nav_link} onClick={cerrarMenu}>
+                                    Inscripciones
+                                </Link>
+                            </li>
+                        </ul>                        
+                    </li>
+                    <li
+                        className={`${style.nav_item} ${style.has_submenu} ${
+                            submenuAbierto === "academica" ? style.dropdown_open : ""
+                        }`}
+                    >
+                        <button
+                            type="button"
+                            className={style.submenu_toggle}
+                            aria-expanded={submenuAbierto === "academica"}
+                            aria-controls="news-submenu"
+                            onClick={() => alternarSubmenu("academica")}
+                        >
+                            Academica
+                        </button>
+                        <ul id="news-submenu" className={style.dropdown}>
+                            <li className={style.nav_item}>
+                                <Link to="/panel-login" className={style.nav_link} onClick={cerrarMenu}>
+                                    Profesorado de Matematicas
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/panel-login" className={style.nav_link} onClick={cerrarMenu}>
+                                    Profesorado de Lengua
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/panel-login" className={style.nav_link} onClick={cerrarMenu}>
+                                    Profesorado de Historia
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/panel-login" className={style.nav_link} onClick={cerrarMenu}>
+                                    Profesorado de Geografia
+                                </Link>
+                            </li>
+                        </ul>                        
+                    </li>
+                    <li
+                        className={`${style.nav_item} ${style.has_submenu} ${
+                            submenuAbierto === "aula virtual" ? style.dropdown_open : ""
+                        }`}
+                    >
+                        <button
+                            type="button"
+                            className={style.submenu_toggle}
+                            aria-expanded={submenuAbierto === "aula virtual"}
+                            aria-controls="news-submenu"
+                            onClick={() => alternarSubmenu("aula virtual")}
+                        >
+                            Campus
+                        </button>
+                        <ul id="news-submenu" className={style.dropdown}>
+                            <li className={style.nav_item}>
+                                <Link to="/panel-login" className={style.nav_link} onClick={cerrarMenu}>
+                                    Alumno
+                                </Link>
+                            </li>
+                            <li className={style.nav_item}>
+                                <Link to="/panel-login" className={style.nav_link} onClick={cerrarMenu}>
+                                    Docente
+                                </Link>
+                            </li>
+                        </ul>                        
+                    </li> 
                     <li className={style.nav_item}>
                         <Link to="/#contacto" className={style.nav_link} onClick={cerrarMenu}>
                             Contacto
