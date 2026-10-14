@@ -26,7 +26,7 @@ function App() {
                     {/*<Route path="/info-niveles" element={<InfoNiveles/>}/>*/}
                     <Route path="/info-niveles/:id" element={<InfoNiveles />} />
                     <Route path="/info-noticias/:id" element={<InfoNoticias />} />
-                    <Route path="/loginPanel" element={<LoginPanel />} />
+                    <Route path="/panel-login" element={<LoginPanel />} />
                 </Route>
                 <Route element={<PrivateLayout />}>
                     <Route path="/panel-admin" element={<PanelAdmin />} />
