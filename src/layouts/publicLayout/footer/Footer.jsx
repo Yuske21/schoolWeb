@@ -76,8 +76,13 @@ export default function Footer() {
             <div className={styles.contenedor}>
                 <div className={styles.informacion}>
                     {/* Identidad institucional */}
-                    <Link to="/" className={styles.identidad}>                        
+                    <Link to="/" className={styles.identidad}>
+                        {/*<div className={styles.escudo} aria-hidden="true">
+                            <span>SR</span>
+                            <small>✦</small>
+                        </div>*/}
                         <img src={logo} alt="Logo Del Colegio Santa Rita" width="60"/>
+
                         <div>
                             <strong>COLEGIO SANTA RITA</strong>
                             <span>Banda del Río Salí · Tucumán</span>
@@ -114,12 +119,12 @@ export default function Footer() {
                     <div className={styles.redes}>
                         <h3>Seguinos en nuestras redes</h3>
 
-                        <div className={styles.iconosRedes}>                            
+                        <div className={styles.iconosRedes}>
                             <a href="https://www.facebook.com/col.santarita.brs" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-facebook fa-xl"></i>
                             </a>
                             <a href="https://www.instagram.com/colegiosantarita.brs" target="_blank" rel="noopener noreferrer">
-                                <i className="fa-brands fa-instagram fa-xl"></i>
+                                <i className="fa-brands fa-square-instagram fa-xl"></i>
                             </a>
                             <a href="https://" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-x-twitter fa-xl"></i>
