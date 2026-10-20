@@ -5,7 +5,7 @@
 
 .level_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -15,27 +15,33 @@
     flex-direction: column;
     height: 100%;
     border-radius: 10px;
-    background-color: var(--color2);
+    border-top: 100px;
+    border-bottom: 20px;
+    border-left: 8px;
+    border-right: 8px;    
+    border-style: solid;
+    border-color: var(--color3);
 
-    border-top: 100px solid var(--color3);
-    border-bottom: 10px solid var(--color0);
-    border-left: 10px solid var(--color0);
-    border-right: 10px solid var(--color0);
-
-    position: relative;
+    position: relative;    
+    background-color: var(--color7);
     transition: 0.3s ease-in-out;
 }
 
-.level:hover {
-    border-color: var(--color3);
+.level:hover {    
+    box-shadow: 3px 3px 10px var(--color1);
+
+    .level_img{
+        box-shadow: 3px 3px 10px var(--color1);
+    }
 }
 
 .level_img {
+    transition: 0.3s ease-in-out;
+
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 3px solid var(--color6);
-
+    border: 2px solid var(--color3);
     position: absolute;
     left: 50%;
     top: 0;
