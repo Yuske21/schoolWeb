@@ -5,6 +5,7 @@ import Accesos from '../../layouts/publicLayout/accesos/Accesos'
 import Niveles from '../../layouts/publicLayout/niveles/Niveles'
 import Numbers from '../../layouts/publicLayout/numbers/Numbers'
 import Gallery from '../../layouts/publicLayout/gallery/Gallery'
+import News2 from '../../layouts/publicLayout/news2/news2'
 
 
 export const Home = () => {
@@ -16,6 +17,7 @@ export const Home = () => {
             <Niveles />
             <Gallery />
             <Noticias />
+            <News2 />
             <Numbers />
         </>
     )
