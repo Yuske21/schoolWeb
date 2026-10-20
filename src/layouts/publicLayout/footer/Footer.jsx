@@ -66,6 +66,7 @@ export default Footer;*/
 
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
+import logo from "../../../assets/index/logo.png";
 
 export default function Footer() {
     const anioActual = new Date().getFullYear();
@@ -75,12 +76,8 @@ export default function Footer() {
             <div className={styles.contenedor}>
                 <div className={styles.informacion}>
                     {/* Identidad institucional */}
-                    <Link to="/" className={styles.identidad}>
-                        <div className={styles.escudo} aria-hidden="true">
-                            <span>SR</span>
-                            <small>✦</small>
-                        </div>
-
+                    <Link to="/" className={styles.identidad}>                        
+                        <img src={logo} alt="Logo Del Colegio Santa Rita" width="60"/>
                         <div>
                             <strong>COLEGIO SANTA RITA</strong>
                             <span>Banda del Río Salí · Tucumán</span>
@@ -117,32 +114,24 @@ export default function Footer() {
                     <div className={styles.redes}>
                         <h3>Seguinos en nuestras redes</h3>
 
-                        <div className={styles.iconosRedes}>
-                            <a
-                                href="https://www.facebook.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                                aria-label="Facebook"
-                            >
-                                f
+                        <div className={styles.iconosRedes}>                            
+                            <a href="https://www.facebook.com/col.santarita.brs" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-facebook fa-xl"></i>
                             </a>
-
-                            <a
-                                href="https://www.instagram.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                                aria-label="Instagram"
-                            >
-                                ◎
+                            <a href="https://www.instagram.com/colegiosantarita.brs" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-instagram fa-xl"></i>
                             </a>
-
-                            <a
-                                href="https://www.youtube.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                                aria-label="YouTube"
-                            >
-                                ▶
+                            <a href="https://" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-x-twitter fa-xl"></i>
+                            </a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-tiktok fa-xl"></i>
+                            </a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-youtube fa-xl"></i>
+                            </a>
+                            <a href="https://wa.me/5493810000000?text=Hola%20quiero%20información" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-brands fa-whatsapp fa-xl"></i>
                             </a>
                         </div>
                     </div>
