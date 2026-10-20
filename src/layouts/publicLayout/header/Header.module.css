@@ -1,4 +1,4 @@
-.header {
+/*.header {
     background-color: var(--color1);    
     position: sticky;
     top: 0;
@@ -65,4 +65,425 @@
     padding: 5px 20px 5px 0px;
     text-align: right;
     background-color: var(--color3);
+}*/
+
+
+.header {
+  --rojo: #c71920;
+  --negro: #171717;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #fff;
+  color: var(--negro);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+}
+
+/* Franja superior */
+
+.frente {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 10px 5%;
+  transition: min-height 0.3s ease, padding 0.3s ease;
+}
+
+.identidad {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: inherit;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.escudo {
+  width: 46px;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    #c71920 0 50%,
+    #171717 50% 100%
+  );
+  border: 2px solid #171717;
+  outline: 1px solid #c71920;
+  outline-offset: 2px;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
+}
+
+.escudo span {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.escudo small {
+  font-size: 10px;
+}
+
+.nombreColegio {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nombreColegio strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  letter-spacing: 0.4px;
+}
+
+.nombreColegio span {
+  color: #666;
+  font-size: 12px;
+}
+
+.accesos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-right: 8px;
+}
+
+.redes a {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 28px;
+  color: #171717;
+  font-size: 19px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.redes a:hover {
+  color: var(--rojo);
+}
+
+.botonDocentes,
+.botonAlumnos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.botonDocentes {
+  background: var(--rojo);
+}
+
+.botonDocentes:hover {
+  background: #a90e16;
+  transform: translateY(-1px);
+}
+
+.botonAlumnos {
+  background: var(--negro);
+}
+
+.botonAlumnos:hover {
+  background: #3b3b3b;
+  transform: translateY(-1px);
+}
+
+/* Menú de navegación */
+
+.navegacion {
+  min-height: 40px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 34px;
+  padding: 0 5%;
+  border-top: 1px solid #f0f0f0;
+  transition: min-height 0.3s ease;
+}
+
+.enlace {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #202020;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.enlace::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--rojo);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.enlace:hover {
+  color: var(--rojo);
+}
+
+.enlace:hover::after {
+  transform: scaleX(1);
+}
+
+.flecha {
+  font-size: 15px;
+}
+
+.grupoMenu {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  display: none;
+  min-width: 190px;
+  padding: 8px 0;
+  background: #fff;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 13%);
+  border-top: 3px solid var(--rojo);
+}
+
+.grupoMenu:hover .submenu,
+.grupoMenu:focus-within .submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu a {
+  padding: 11px 15px;
+  color: #333;
+  font-size: 12px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.submenu a:hover {
+  color: var(--rojo);
+  background: #f7f7f7;
+}
+
+.botonBuscar {
+  align-self: center;
+  border: 0;
+  background: transparent;
+  color: #171717;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.botonMenu {
+  display: none;
+}
+
+/* Encabezado compacto al desplazarse */
+
+.compacto .frente {
+  min-height: 54px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.compacto .escudo {
+  width: 34px;
+  height: 40px;
+}
+
+.compacto .nombreColegio strong {
+  font-size: 16px;
+}
+
+.compacto .navegacion {
+  min-height: 34px;
+}
+
+/* Adaptación a tabletas */
+
+@media (max-width: 950px) {
+  .frente {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .accesos {
+    gap: 8px;
+  }
+
+  .redes {
+    gap: 7px;
+  }
+
+  .botonDocentes,
+  .botonAlumnos {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .navegacion {
+    gap: 22px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 700px) {
+  .frente {
+    min-height: 68px;
+    padding: 10px 5%;
+  }
+
+  .identidad {
+    gap: 12px;
+  }
+
+  .escudo {
+    width: 37px;
+    height: 45px;
+  }
+
+  .nombreColegio strong {
+    font-size: 15px;
+  }
+
+  .nombreColegio span {
+    font-size: 10px;
+  }
+
+  .accesos {
+    margin-left: auto;
+  }
+
+  .redes {
+    display: none;
+  }
+
+  .botonDocentes,
+  .botonAlumnos {
+    display: none;
+  }
+
+  .botonMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .botonMenu span {
+    width: 100%;
+    height: 2px;
+    background: #171717;
+  }
+
+  .navegacion {
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 5% 14px;
+    border-top: 1px solid #eee;
+  }
+
+  .navegacionAbierta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .enlace {
+    min-height: 42px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .enlace::after {
+    display: none;
+  }
+
+  .grupoMenu {
+    flex-direction: column;
+  }
+
+  .grupoMenu > .enlace {
+    min-height: 42px;
+  }
+
+  .submenu {
+    position: static;
+    min-width: 0;
+    padding: 0 0 5px 12px;
+    box-shadow: none;
+    border-top: 0;
+  }
+
+  .grupoMenu:hover .submenu,
+  .grupoMenu:focus-within .submenu {
+    display: flex;
+  }
+
+  .submenu a {
+    padding: 10px;
+  }
+
+  .botonBuscar {
+    align-self: flex-start;
+  }
+
+  .compacto .frente {
+    min-height: 58px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header *,
+  .header *::before,
+  .header *::after {
+    transition: none !important;
+  }
 }
