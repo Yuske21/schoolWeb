@@ -1,0 +1,175 @@
+.niveles {
+  padding: 42px 0 52px;
+  background: #fff;
+  scroll-margin-top: 110px;
+}
+
+.contenedor {
+  width: min(100% - 10%, 1320px);
+  margin: 0 auto;
+}
+
+.encabezado {
+  margin-bottom: 25px;
+}
+
+.lineaRoja {
+  display: block;
+  width: 29px;
+  height: 3px;
+  margin-bottom: 12px;
+  background: #c71920;
+}
+
+.encabezado h2 {
+  margin: 0;
+  color: #202020;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.2;
+}
+
+.encabezado p {
+  margin: 8px 0 0;
+  color: #444;
+  font-size: 15px;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.tarjeta {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 5%);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgb(0 0 0 / 10%);
+}
+
+.imagenContenedor {
+  height: 155px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.imagenContenedor img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tarjeta:hover .imagenContenedor img {
+  transform: scale(1.05);
+}
+
+.icono {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  margin: -22px 0 0 20px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #c71920;
+  color: #fff;
+  font-size: 21px;
+}
+
+.contenido {
+  padding: 9px 20px 16px;
+}
+
+.contenido h3 {
+  margin: 0 0 7px;
+  color: #202020;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contenido p {
+  min-height: 42px;
+  margin: 0;
+  color: #656565;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.enlace {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+  color: #c71920;
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.enlace:hover {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1000px) {
+  .grilla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .imagenContenedor {
+    height: 190px;
+  }
+}
+
+@media (max-width: 550px) {
+  .niveles {
+    padding: 32px 0 38px;
+  }
+
+  .contenedor {
+    width: 90%;
+  }
+
+  .grilla {
+    gap: 13px;
+  }
+
+  .imagenContenedor {
+    height: 125px;
+  }
+
+  .icono {
+    width: 37px;
+    height: 37px;
+    margin-left: 12px;
+    font-size: 18px;
+  }
+
+  .contenido {
+    padding: 8px 12px 13px;
+  }
+
+  .contenido h3 {
+    font-size: 14px;
+  }
+
+  .contenido p {
+    font-size: 11px;
+  }
+}
