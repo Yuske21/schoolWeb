@@ -54,7 +54,7 @@
 }
 
 .app_title2 p {
-    color: var(--color0);
+    color: var(--color11);
     font-size: clamp(1rem, 4vw, 4rem);
     font-weight: bolder;
 }
