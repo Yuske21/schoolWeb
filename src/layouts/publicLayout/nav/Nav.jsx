@@ -146,17 +146,17 @@ const Nav = () => {
                     </li>
                     <li
                         className={`${style.nav_item} ${style.has_submenu} ${
-                            submenuAbierto === "academica" ? style.dropdown_open : ""
+                            submenuAbierto === "formacion" ? style.dropdown_open : ""
                         }`}
                     >
                         <button
                             type="button"
                             className={style.submenu_toggle}
-                            aria-expanded={submenuAbierto === "academica"}
+                            aria-expanded={submenuAbierto === "formacion"}
                             aria-controls="news-submenu"
-                            onClick={() => alternarSubmenu("academica")}
+                            onClick={() => alternarSubmenu("formacion")}
                         >
-                            Academica
+                            Formacion
                         </button>
                         <ul id="news-submenu" className={style.dropdown}>
                             <li className={style.nav_item}>
