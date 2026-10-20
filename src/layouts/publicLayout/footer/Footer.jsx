@@ -1,4 +1,4 @@
-import style from './Footer.module.css'
+/*import style from './Footer.module.css'
 import logo from "../../../assets/index/logo.png";
 
 const Footer = () => {
@@ -61,4 +61,111 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+export default Footer;*/
+
+
+import { Link } from "react-router-dom";
+import styles from "./Footer.module.css";
+
+export default function Footer() {
+    const anioActual = new Date().getFullYear();
+
+    return (
+        <footer id="contacto" className={styles.footer}>
+            <div className={styles.contenedor}>
+                <div className={styles.informacion}>
+                    {/* Identidad institucional */}
+                    <Link to="/" className={styles.identidad}>
+                        <div className={styles.escudo} aria-hidden="true">
+                            <span>SR</span>
+                            <small>✦</small>
+                        </div>
+
+                        <div>
+                            <strong>COLEGIO SANTA RITA</strong>
+                            <span>Banda del Río Salí · Tucumán</span>
+                        </div>
+                    </Link>
+
+                    {/* Datos de contacto: reemplazar por los oficiales */}
+                    <div className={styles.contacto}>
+                        <p>
+                            <span aria-hidden="true">⌖</span>
+                            <span>
+                                Banda del Río Salí,
+                                <br />
+                                Tucumán, Argentina
+                            </span>
+                        </p>
+
+                        <p>
+                            <span aria-hidden="true">☎</span>
+                            <a href="tel:+543810000000">
+                                Teléfono institucional
+                            </a>
+                        </p>
+
+                        <p>
+                            <span aria-hidden="true">✉</span>
+                            <a href="mailto:contacto@ejemplo.com">
+                                Correo institucional
+                            </a>
+                        </p>
+                    </div>
+
+                    {/* Redes sociales */}
+                    <div className={styles.redes}>
+                        <h3>Seguinos en nuestras redes</h3>
+
+                        <div className={styles.iconosRedes}>
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Facebook"
+                            >
+                                f
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Instagram"
+                            >
+                                ◎
+                            </a>
+
+                            <a
+                                href="https://www.youtube.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="YouTube"
+                            >
+                                ▶
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Lema */}
+                    <div className={styles.lema}>
+                        <p>
+                            Educación,
+                            <br />
+                            compromiso
+                            <br />
+                            y comunidad.
+                        </p>
+                    </div>
+                </div>
+
+                <div className={styles.pie}>
+                    <p>
+                        © {anioActual} Colegio Santa Rita.
+                        Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    );
+}

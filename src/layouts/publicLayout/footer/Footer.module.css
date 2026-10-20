@@ -1,5 +1,4 @@
-
-.prefooter_container {
+/*.prefooter_container {
     border-top: 5px solid var(--color0);
     display: flex;
     flex-direction: row;
@@ -31,7 +30,7 @@
     padding: 0 0 8px 0;
 }
 
-/*************************************************/
+/************************************************
 .footer{
     background-color: var(--color3);
     text-align: center;
@@ -40,4 +39,226 @@
 
 .footer p {
     font-weight: 600;
+}*/
+
+
+.footer {
+    color: #fff;
+    background: linear-gradient(135deg, #222 0%, #141414 100%);
+}
+
+.contenedor {
+    width: min(100% - 10%, 1320px);
+    margin: 0 auto;
+}
+
+.informacion {
+    display: grid;
+    grid-template-columns: 1.3fr 1.25fr 1.1fr 0.8fr;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0;
+}
+
+.identidad {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.escudo {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 53px;
+    color: #fff;
+    background: linear-gradient(90deg,
+            #c71920 0 50%,
+            #333 50% 100%);
+    border: 1px solid #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
+}
+
+.escudo span {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.escudo small {
+    font-size: 10px;
+}
+
+.identidad>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.identidad strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.identidad>div>span {
+    color: #bdbdbd;
+    font-size: 10px;
+}
+
+.contacto {
+    padding-left: 20px;
+    border-left: 1px solid #414141;
+}
+
+.contacto p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 0 11px;
+    color: #e3e3e3;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.contacto p:last-child {
+    margin-bottom: 0;
+}
+
+.contacto p>span:first-child {
+    width: 15px;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 15px;
+}
+
+.contacto a {
+    color: inherit;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contacto a:hover {
+    color: #ff666b;
+}
+
+.redes {
+    align-self: stretch;
+    padding: 8px 20px;
+    border-left: 1px solid #414141;
+}
+
+.redes h3 {
+    margin: 0 0 15px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.iconosRedes {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.iconosRedes a {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.iconosRedes a:hover {
+    background: #c71920;
+    border-color: #c71920;
+}
+
+.lema {
+    display: flex;
+    align-items: center;
+    min-height: 65px;
+    padding-left: 20px;
+    border-left: 1px solid #414141;
+}
+
+.lema p {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.pie {
+    padding: 17px 0;
+    border-top: 1px solid #414141;
+    text-align: center;
+}
+
+.pie p {
+    margin: 0;
+    color: #bdbdbd;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+    .informacion {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 28px;
+    }
+
+    .redes {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .lema {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .contenedor {
+        width: 90%;
+    }
+
+    .informacion {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 28px 0;
+    }
+
+    .contacto,
+    .redes,
+    .lema {
+        padding: 0;
+        border: 0;
+    }
+
+    .identidad strong {
+        font-size: 15px;
+    }
+
+    .lema p {
+        padding-left: 12px;
+        border-left: 3px solid #c71920;
+    }
+
+    .pie {
+        padding: 16px 0;
+    }
 }
